@@ -26,7 +26,7 @@
   {
     "id": 4,
     "nama": "Kemeja Bayam Raja",
-    "kategori": "busana",
+    "kategori": "pakaian",
     "harga": 245000,
     "gambar": "img/bayam-raja.svg",
     "deskripsi": "Kemeja pria berbahan katun dengan motif bayam raja warna hijau."
@@ -42,7 +42,7 @@
   {
     "id": 6,
     "nama": "Gamis Ombak Sinapur Karang",
-    "kategori": "busana",
+    "kategori": "pakaian",
     "harga": 320000,
     "gambar": "img/ombak-sinapur-karang.svg",
     "deskripsi": "Gamis wanita bermotif ombak sinapur karang dengan bahan rayon."
@@ -74,7 +74,7 @@
   {
     "id": 10,
     "nama": "Kemeja Bayam Raja Lengan Panjang",
-    "kategori": "busana",
+    "kategori": "pakaian",
     "harga": 265000,
     "gambar": "img/bayam-raja.svg",
     "deskripsi": "Kemeja lengan panjang berbahan katun premium motif bayam raja."
@@ -90,7 +90,7 @@
   {
     "id": 12,
     "nama": "Gamis Ombak Sinapur Karang Muda",
-    "kategori": "busana",
+    "kategori": "pakaian",
     "harga": 299000,
     "gambar": "img/ombak-sinapur-karang.svg",
     "deskripsi": "Gamis warna cerah dengan motif ombak sinapur karang."
@@ -122,7 +122,7 @@
   {
     "id": 16,
     "nama": "Setel Bayam Raja Modern",
-    "kategori": "busana",
+    "kategori": "pakaian",
     "harga": 350000,
     "gambar": "img/bayam-raja.svg",
     "deskripsi": "Setelan atasan dan bawahan bermotif bayam raja untuk acara formal."

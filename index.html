@@ -7,7 +7,9 @@
     <meta name="description" content="Katalog kain dan busana Sasirangan khas Banjarmasin karya pengrajin lokal.">
     <title>Sasirangan Banua | Kain Khas Banjar</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <script src="js/katalog.js" defer></script>
+    <script src="js/jadwal-salat.js" defer></script>
 </head>
 
 <body>
@@ -98,11 +100,21 @@
             </table>
         </section>
     </main>
+    <!-- ========== JADWAL SALAT (data dari API) ========== -->
+    <section class="bagian" id="jadwal">
+        <div class="jadwal-salat" id="jadwal-salat">
+            <h2>Jadwal Salat Banjarmasin Hari Ini</h2>
+            <p class="status" aria-live="polite">Memuat jadwal salat...</p>
+            <ul class="daftar-waktu" hidden></ul>
+            <p class="sumber">Sumber data: API MyQuran (jadwal Kemenag RI).</p>
+        </div>
+    </section>
     <!-- ========== FOOTER ========== -->
     <footer class="footer-situs">
         <p>&copy; 2026 Sasirangan Banua &middot; Kampung Sasirangan, Banjarmasin</p>
         <p>Dibuat oleh Ahmad David Alvees (2510010121) &middot; Praktikum Pemrograman Web 1 UNISKA MAB</p>
     </footer>
+
 </body>
 
 </html>
