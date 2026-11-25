@@ -3,35 +3,9 @@
 // Praktikum Pemrograman Web 1 · Sasirangan Banua
 // =========================================================
 
-// 1. Data katalog: array yang berisi objek-objek produk
-const katalog = [
-  {
-    id: 1,
-    nama: "Kain Motif Gigi Haruan",
-    kategori: "kain",
-    harga: 185000,
-    gambar: "img/gigi-haruan.svg",
-    deskripsi:
-      "Kain katun 2 meter bermotif zig-zag menyerupai gigi ikan haruan.",
-  },
-  {
-    id: 2,
-    nama: "Kain Motif Kambang Kacang",
-    kategori: "kain",
-    harga: 175000,
-    gambar: "img/kambang-kacang.svg",
-    deskripsi: "Motif bunga kacang yang melambangkan keakraban dan kerukunan.",
-  },
-  {
-    id: 3,
-    nama: "Selendang Iris Pudak",
-    kategori: "aksesoris",
-    harga: 120000,
-    gambar: "img/iris-pudak.svg",
-    deskripsi: "Selendang ringan bermotif irisan daun pudak (pandan).",
-  },
-  // ... lanjutkan untuk semua item (minimal 8 untuk tema Anda)
-];
+// 1. Data katalog kini disimpan di data/katalog.json.
+//    Awalnya kosong, lalu diisi oleh fungsi muatKatalog().
+let katalog = [];
 // 2. Ambil elemen-elemen HTML yang akan dimanipulasi
 const daftarKatalog = document.querySelector("#daftar-katalog");
 const inputCari = document.querySelector("#cari");
@@ -132,5 +106,22 @@ tombolFilter.forEach((tombol) => {
     saringKatalog();
   });
 });
-// 10. Tampilkan semua produk ketika halaman pertama kali dibuka
-tampilkanKatalog(katalog);
+// 10. Memuat data katalog dari file JSON secara asinkron
+async function muatKatalog() {
+  infoJumlah.textContent = "Memuat katalog...";
+
+  try {
+    const respons = await fetch("data/katalog.json");
+    if (!respons.ok) {
+      throw new Error(`Gagal memuat katalog (HTTP ${respons.status})`);
+    }
+    katalog = await respons.json();
+    tampilkanKatalog(katalog);
+  } catch (galat) {
+    console.error(galat);
+    infoJumlah.textContent =
+      "Maaf, katalog gagal dimuat. Periksa koneksi Anda lalu muat ulang halaman.";
+  }
+}
+
+muatKatalog();
